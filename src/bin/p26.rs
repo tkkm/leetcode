@@ -13,12 +13,10 @@ impl Solution {
     pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
         let mut insert_index = 0;
 
-        for loop_index in 0..nums.len() {
-            let num = nums[loop_index];
-
-            if nums[insert_index] != num {
+        for loop_index in 1..nums.len() {
+            if nums[insert_index] != nums[loop_index] {
                 insert_index += 1;
-                nums[insert_index] = num;
+                nums[insert_index] = nums[loop_index];
             }
 
             // println!("{} {} {} {:?}", num, insert_index, loop_index, nums);
