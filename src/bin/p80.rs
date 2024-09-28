@@ -39,4 +39,12 @@ mod tests {
         assert_eq!(nums[..7], vec![0, 0, 1, 1, 2, 3, 3]);
         assert_eq!(num, 7);
     }
+
+    #[test]
+    fn test3() {
+        let mut nums = vec![0, 0, 1, 1, 1, 1, 2];
+        let num = Solution::remove_duplicates(&mut nums);
+        assert_eq!(num, 5);
+        assert_eq!(nums[..5], vec![0, 0, 1, 1, 2]);
+    }
 }
